@@ -33,7 +33,7 @@ const Home = () => {
           </>
         ) : (
           <>
-            {/* map messages onto text bubbles */}
+            {messages.map((message, index) => <Bubble key={`message-${index}`} message={message} />)}
             {isLoading && <LoadingBubble />}
           </>
         )}
