@@ -8,7 +8,7 @@ import { Message } from "ai"
 const Home = () => {
   const { append, isLoading, messages, input, handleInputChange, handleSubmit } = useChat()
 
-  const noMessages = false
+  const noMessages = true
   return (
     <main>
       <Image
@@ -26,7 +26,7 @@ const Home = () => {
               We hope you enjoy!
             </p>
             <br />
-            {/* <PromptSuggestionRow /> */}
+            {/* <PromptSuggestionsRow /> */}
           </>
         ) : (
           <>
@@ -37,7 +37,7 @@ const Home = () => {
       </section>
       <form onSubmit={handleSubmit}>
         <input className="question-box" onChange={handleInputChange} value={input} placeholder="Ask me something..." />
-        <button type="submit">Send</button>
+        <input type="submit" value="Send" />
       </form>
     </main>
   )
